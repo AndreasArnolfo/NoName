@@ -31,8 +31,12 @@ export class NotesService {
     return this.afs.doc<any>(`notes/${id}`);
   }
 
-  createNote(content: string) {
+  createNote(content: string, title: string, author: string, categorie: string, image: string) {
     const note = {
+      image,
+      categorie,
+      author,
+      title,
       content,
       hearts: 0,
       time: new Date().getTime(),

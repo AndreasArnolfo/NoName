@@ -2,7 +2,13 @@
 
 <hr>
 
-<input [(ngModel)]="content" placeholder="Add your own note" class="input" name="note">
+<input [(ngModel)]="author" placeholder="Author" class="input" name="note">
+<input [(ngModel)]="title" placeholder="title" class="input" name="note">
+<input [(ngModel)]="content" placeholder="content" class="input" name="note">
+<input [(ngModel)]="category" placeholder="category" class="input" name="note">
+<input [(ngModel)]="image" placeholder="image" class="input" name="note">
+
+
 
 
 <button class="button is-success" (click)="clickHandler()" [disabled]="content?.length < 2 || content?.length > 200">
@@ -10,5 +16,5 @@
 </button>
 <hr>
 <div *ngFor="let note of notes | async">
-    <note-detail [note]="note"></note-detail>
+    <note-detail routerLink="../show-note" [note]="note"></note-detail>
 </div>

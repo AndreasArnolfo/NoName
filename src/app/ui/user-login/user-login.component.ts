@@ -50,4 +50,8 @@ export class UserLoginComponent {
     return this.router.navigate(['/']);
   }
 
+  logout() {
+    this.auth.signOut();
+  }
+
 }
