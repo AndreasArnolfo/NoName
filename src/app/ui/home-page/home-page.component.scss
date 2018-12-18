@@ -39,7 +39,7 @@ ul {
 header {
   min-height:100vh;
   background:linear-gradient(to bottom,rgba($black,.8),transparent),
-    url('http://zigis.com.au/wp-content/uploads/2014/05/holiday2013_front.jpg')no-repeat center center;
+    url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80')no-repeat center center;
   background-size:cover;
   background-attachment: fixed;
   display:flex;
@@ -52,12 +52,13 @@ header {
     display:flex;
     position:relative;
     h2 {
+      color: #fff;
       margin-bottom:0;
       flex:1;
       letter-spacing:3px;
       font-family: $OverpassMonoFont !important;
       #logo {
-        color:lightgray;
+        color:rgb(255, 255, 255);
         text-transform:uppercase;
         border-bottom:solid 2px lightgray;
       }
@@ -218,7 +219,7 @@ nav div.show {
   flex-direction:column;
   align-items:center;
   .stuffed-cherries {
-    background:url('https://s-media-cache-ak0.pinimg.com/736x/61/b1/98/61b19844448b2bad5c78e9a2c6347986.jpg')no-repeat center center;
+    background:url('https://images.unsplash.com/photo-1541705897117-dc56b6637c9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80')no-repeat center center;
     background-size:cover;
     height:315px;
     width:320px;
