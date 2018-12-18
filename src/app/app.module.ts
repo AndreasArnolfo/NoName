@@ -21,12 +21,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { ShowNoteComponent } from './show-note/show-note.component';
 
 // IMPORTANT
 // Add your own project credentials to environments/*.ts
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ShowNoteComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule,
@@ -46,4 +47,5 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}

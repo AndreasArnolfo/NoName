@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { NotesService } from '../notes.service';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,11 @@ import { Observable } from 'rxjs';
 export class NotesListComponent implements OnInit {
 
   notes: Observable<any[]>;
+  title: string;
   content: string;
+  author: string;
+  category: string;
+  image: string;
 
   constructor(private notesService: NotesService) { }
 
@@ -19,8 +23,12 @@ export class NotesListComponent implements OnInit {
   }
 
   clickHandler() {
-    this.notesService.createNote(this.content);
+    this.notesService.createNote(this.content, this.title, this.author, this.category, this.image);
     this.content = '';
-  }
+    this.title = '';
+    this.author = '';
+    this.category = '';
+    this.image = '';
 
+  }
 }
