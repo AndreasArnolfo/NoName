@@ -1,8 +1,8 @@
 # Projet Ecole
 
-...
-![Mockup for feature A](https://images.unsplash.com/photo-1534778356534-d3d45b6df1da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80)
-...
+
+![Mockup for feature A](https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80)
+
 
 ## *Instruction* :
 
