@@ -34,7 +34,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6
 {
     font-family: $heading-font;
     font-weight: 300 !important;
@@ -105,7 +105,16 @@ a {
 
 ///// Social Buttons
 .input {
-    margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  width:50%;
+  margin-left: 25%;
+}
+
+.radio{
 }
 
 .btn-social {

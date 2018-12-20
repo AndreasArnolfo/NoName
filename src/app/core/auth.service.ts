@@ -49,46 +49,15 @@ export class AuthService {
     const provider = new auth.GoogleAuthProvider();
     return this.oAuthLogin(provider);
   }
-
-  githubLogin() {
-    const provider = new auth.GithubAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  facebookLogin() {
-    const provider = new auth.FacebookAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  twitterLogin() {
-    const provider = new auth.TwitterAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
   private oAuthLogin(provider: any) {
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Bienvenu sur le site de la coiffure', 'success');
         return this.updateUserData(credential.user);
       })
       .catch(error => this.handleError(error));
   }
-
-  //// Anonymous Auth ////
-
-  anonymousLogin() {
-    return this.afAuth.auth
-      .signInAnonymously()
-      .then(credential => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
-        return this.updateUserData(credential.user); // if using firestore
-      })
-      .catch(error => {
-        this.handleError(error);
-      });
-  }
-
   //// Email/Password Auth ////
 
   emailSignUp(email: string, password: string) {
@@ -147,4 +116,17 @@ export class AuthService {
     };
     return userRef.set(data);
   }
+
+  anonymousLogin() {
+    return this.afAuth.auth
+      .signInAnonymously()
+      .then(credential => {
+        this.notify.update('Welcome to Firestarter!!!', 'success');
+        return this.updateUserData(credential.user); // if using firestore
+      })
+      .catch(error => {
+        this.handleError(error);
+      });
+  }
+
 }

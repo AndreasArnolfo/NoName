@@ -11,7 +11,6 @@ import { environment } from '../environments/environment';
 
 // Firestarter App Modules
 import { CoreModule } from './core/core.module';
-import { UploadsModule } from './uploads/uploads.module';
 import { UiModule } from './ui/ui.module';
 import { NotesModule } from './notes/notes.module';
 
@@ -35,7 +34,6 @@ import { ShowNoteComponent } from './show-note/show-note.component';
     CoreModule,
     UiModule,
     NotesModule,
-    UploadsModule,
     AngularFireModule.initializeApp(environment.firebase, 'Projectouf'),
     AngularFirestoreModule,
     AngularFireAuthModule,

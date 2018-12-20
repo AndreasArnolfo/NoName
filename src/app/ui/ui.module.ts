@@ -10,7 +10,6 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { NotificationMessageComponent } from './notification-message/notification-message.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { SsrPageComponent } from './ssr-page/ssr-page.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
@@ -22,7 +21,6 @@ import { SsrPageComponent } from './ssr-page/ssr-page.component';
     NotificationMessageComponent,
     UserProfileComponent,
     UserFormComponent,
-    SsrPageComponent
   ],
   exports: [
     MainNavComponent,

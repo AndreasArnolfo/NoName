@@ -1,20 +1,21 @@
-<h1>Ajouter une Note</h1>
+<div class="formCoiffure">
+  <h1 style="text-align: center">Ajouter une coiffure</h1>
 
-<hr>
+  <input [(ngModel)]="author" placeholder="Votre Nom" class="input" name="note">
+  <input [(ngModel)]="coiffeurName" placeholder="Nom du coiffeur" class="input" name="note">
+  <div style="text-align: center; margin: 2%;">
+    <input type="radio" id="male" name="sexe" value="male" class="radio" [(ngModel)]="male">
+    <label for="male">Homme</label>
+    <input type="radio" id="female" name="sexe" value="female" class="radio" [(ngModel)]="female" checked>
+    <label for="female">Femme</label>
+  </div>
+  <input [(ngModel)]="category" placeholder="Choisir une catégories" class="input" name="note">
+  <input style="margin-left: 25%" [(ngModel)]="image" type="file" (change)="onFileChanged($event)"><br/>
 
-<input [(ngModel)]="author" placeholder="Author" class="input" name="note">
-<input [(ngModel)]="title" placeholder="title" class="input" name="note">
-<input [(ngModel)]="content" placeholder="content" class="input" name="note">
-<input [(ngModel)]="category" placeholder="category" class="input" name="note">
-<input [(ngModel)]="image" placeholder="image" class="input" name="note">
-
-
-
-
-<button class="button is-success" (click)="clickHandler()" [disabled]="content?.length < 2 || content?.length > 200">
-  Add Note
-</button>
-<hr>
-<div *ngFor="let note of notes | async">
-    <note-detail routerLink="../show-note" [note]="note"></note-detail>
+  <button class="button is-success" (click)="clickHandler()" style="margin-left: 25%">
+    Ajouter coiffure
+  </button>
+  <div *ngFor="let note of notes | async">
+      <note-detail routerLink="../show-note" [note]="note"></note-detail>
+  </div>
 </div>

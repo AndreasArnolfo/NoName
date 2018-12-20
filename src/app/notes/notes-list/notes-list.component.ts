@@ -10,10 +10,11 @@ import { Observable } from 'rxjs';
 export class NotesListComponent implements OnInit {
 
   notes: Observable<any[]>;
-  title: string;
-  content: string;
+  coiffeurName: string;
+  male: string;
+  female: string;
   author: string;
-  category: string;
+  category: number;
   image: string;
 
   constructor(private notesService: NotesService) { }
@@ -23,12 +24,7 @@ export class NotesListComponent implements OnInit {
   }
 
   clickHandler() {
-    this.notesService.createNote(this.content, this.title, this.author, this.category, this.image);
-    this.content = '';
-    this.title = '';
-    this.author = '';
-    this.category = '';
-    this.image = '';
-
+    this.notesService.createNote(this.coiffeurName, this.male, this.female, this.author, this.category, this.image);
+    console.log(this.female, this.male, this.image);
   }
 }

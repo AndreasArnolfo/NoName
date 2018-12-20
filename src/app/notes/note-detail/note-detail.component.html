@@ -2,11 +2,7 @@
   <h3><a href="/note/{{ note.id }}">{{ note.title }}</a></h3>
   <img src="{{note.image}}" />
   <p>{{ note.content }}</p>
-  <span class="button is-small is-info" (click)='addHeartToNote(note.hearts)'>
-    Heart <i class="fa fa-heart" style="margin-left: 5px;"></i>
-  </span>
   <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete</span>
-  <p>Vous avez {{ note.hearts || 0 }} j'aimes</p>
   <p>by {{ note.author }}</p>
   <p>category : {{ note.category }}</p>
 </div>

@@ -5,6 +5,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
 @Injectable()
 export class NotesService {
 
@@ -31,14 +32,14 @@ export class NotesService {
     return this.afs.doc<any>(`notes/${id}`);
   }
 
-  createNote(content: string, title: string, author: string, categorie: string, image: string) {
+  createNote(content: string, female: string, male: string, author: string, category: number, image: string) {
     const note = {
       image,
-      categorie,
+      female,
+      male,
+      category,
       author,
-      title,
       content,
-      hearts: 0,
       time: new Date().getTime(),
     };
     return this.notesCollection.add(note);
